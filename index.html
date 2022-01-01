@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/fonts/favicon_io (1)/favicon-16x16.png">
     <link rel="manifest" href="./assets/fonts/favicon_io (1)/site.webmanifest">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -40,6 +41,10 @@
             <!-- Begin: Search buttom -->
             <div class="search-btn">
                 <i class="search-icon fas fa-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon fas fa-bars"></i>
             </div>
             <!-- Begin: Search buttom -->
         </div>
@@ -155,9 +160,8 @@
                 </div>
             </div> 
             <!-- End: Contact section -->
-
-            <div class="map-section">
-                <img src="./assets/img/map.jpg" alt="Map">
+            <div>
+                <img class="map-section" src="./assets/img/map.jpg" alt="Map">
             </div>
 
         </div>
@@ -236,6 +240,35 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // Close/Open mobile menu
+
+        mobileMenu.onclick = function() {
+            var isClose = header.clientHeight === headerHeight;
+            if(isClose) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+
+        // Close auto mobile menu when click menu
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(){
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 </html>
