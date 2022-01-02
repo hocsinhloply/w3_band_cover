@@ -55,6 +55,7 @@ button {
     margin-top: 15px;
     cursor: pointer;
     border: none;
+    -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -68,6 +69,10 @@ button {
 
 .mt-16 {
     margin-top: 16px;
+}
+
+.mt-32 {
+    margin-top: 32px;
 }
 
 .row {
@@ -114,7 +119,6 @@ button {
     height: 46px;
     background-color: #000;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav {
@@ -176,6 +180,13 @@ button {
     font-size: 16px;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
 #header .mobile-menu-btn,
 #header .search-btn {
     float: right;
@@ -206,7 +217,7 @@ button {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/slider/slider1.jpg') top center /cover no-repeat;
+    background: url('../img/slider/slider1.jpg') top center /cover no-repeat;
 }
 
 #slider .text-content {
@@ -229,6 +240,7 @@ button {
 #slider .text-description {
     font-size: 15px;
     margin-top: 25px;
+    box-shadow: 0 0 1px #000;
 }
 
 
@@ -270,7 +282,7 @@ button {
 }
 
 #content .member-list {
-    margin-top: 48px;
+    margin-top: 32px;
 }
 
 #content .member-name {
@@ -324,7 +336,7 @@ button {
 /* Places */
 
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
@@ -475,6 +487,15 @@ button {
     display: inline-block;
 }
 
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
 .contact-form {
     font-size: 16px;
 }
@@ -507,16 +528,16 @@ button {
     text-align: center;
 }
 
-#footer .social-list {
+#footer .socials-list {
     font-size: 24px;
 }
 
-#footer .social-list a {
+#footer .socials-list a {
     color: rgba(0, 0, 0, 0.6);
 }
 
 #footer .copyright a:hover,
-#footer .social-list a:hover {
+#footer .socials-list a:hover {
     color: rgba(0, 0, 0, 0.4);
 }
 
